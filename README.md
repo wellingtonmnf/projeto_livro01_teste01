@@ -18,4 +18,5 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 # projeto_livro01_teste01
 
-* Atualização feita no Fedora 40
+* 1ª atualização feita no Fedora 40
+* 2ª atualização feita no Fedora 40
