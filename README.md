@@ -20,3 +20,4 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 * 1ª atualização feita no Fedora 40
 * 2ª atualização feita no Fedora 40
+* 3ª atualização feita no Windows 11
