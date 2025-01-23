@@ -6,7 +6,7 @@ public with sharing class ContaContato {
         contasComContatosMap = new Map<Account, List<Contact>>();
         List<Account> contas = [SELECT Id, Name FROM Account];
         for (Account conta : contas) {
-            List<Contact> contatos = [SELECT Id, FirstName, LastName FROM Contact WHERE AccountId = :conta.Id];
+            List<Contact> contatos = [SELECT Id, FirstName, LastName, AccountId FROM Contact WHERE AccountId = :conta.Id];
             contasComContatosMap.put(conta, contatos);
         }
     }
