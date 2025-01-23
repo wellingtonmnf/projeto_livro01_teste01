@@ -25,12 +25,12 @@ private class ContaContatoTest {
 
         //Verificação dos resultados
         Map<Account,List<Contact>> contasComContatosMap = ccc.contasComContatosMap;
-        System.assertEquals(contas.size(), contasComContatosMap.size());
+        System.assertEquals(contas.size(), contasComContatosMap.size(), 'O mapa possui o mesmo tamanho da lista de contas');
 
         for (Account conta : contasComContatosMap.keySet()) {
             List<Contact> contatosParaConta = contasComContatosMap.get(conta);
             for (Contact contato : contatosParaConta) {
-                System.assertEquals(conta.Id, contato.AccountId);
+                System.assertEquals(conta.Id, contato.AccountId, 'Os contatos pertencem as contas');
             }
         }
     }

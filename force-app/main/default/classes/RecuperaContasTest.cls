@@ -11,11 +11,11 @@ private class RecuperaContasTest {
     }
 
     @isTest
-    static void testImprimeContas_shouldPrintAListAccount_whenHaveAccountsInDatabase() {
+    static void testImprimeContas() { 
         RecuperaContas rc = new RecuperaContas();
         Test.startTest();
         rc.imprimeContas();
         Test.stopTest();
-        System.assertEquals(5, rc.contas.size());
+        System.assertEquals(5, rc.contas.size(), 'Todas as contas foram recuperadas');
     }
 }

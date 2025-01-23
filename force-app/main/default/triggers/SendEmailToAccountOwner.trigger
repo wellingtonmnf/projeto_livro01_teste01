@@ -20,7 +20,7 @@ trigger SendEmailToAccountOwner on Opportunity (after insert) {
         Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
         email.setToAddresses(new String[] {[SELECT Email FROM User WHERE Id = :accountOwnerMap.get(opp.AccountId)].Email});
         email.setSubject('Nova Oportunidade Adicionada');
-        email.setPlainTextBody('Uma nova oportunidade foi adicionada à sua conta' + opp.Account.Name);
+        email.setPlainTextBody('Uma nova oportunidade foi adicionada à sua conta ' + opp.Account.Name);
         emails.add(email);
     }
 
