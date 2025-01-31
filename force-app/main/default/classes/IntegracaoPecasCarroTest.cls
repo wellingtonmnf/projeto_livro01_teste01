@@ -9,9 +9,9 @@ private class IntegracaoPecasCarroTest implements HttpCalloutMock {
         IntegracaoPecasCarro.getPartsCar('123456');
         Test.stopTest();
 
-        Part__c part = [SELECT Name FROM Part__c WHERE Name = 'Farol esquerdo' LIMIT 1];
-        System.assertNotEquals('Farol esquerdo',part.Name);
-        System.assertNotEquals(150.00,part.PartCost__c);
+        Part__c part = [SELECT Id, Name, PartCost__c FROM Part__c WHERE Name = 'Farol esquerdo' LIMIT 1];
+        System.assertEquals('Farol esquerdo',part.Name);
+        System.assertEquals(150.00,part.PartCost__c);
         
     }
 

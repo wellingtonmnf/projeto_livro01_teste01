@@ -10,7 +10,7 @@ public with sharing class IntegracaoPecasCarro {
         request.setMethod('GET');
         HttpResponse response = http.send(request);
 
-        List<Part__c> partsToUpsert =null;
+        List<Part__c> partsToUpsert = null;
 
         if (response.getStatusCode() == 200) {
             Map<String,Object> resultData = (Map<String,Object>)JSON.deserializeUntyped(response.getBody());
@@ -33,5 +33,6 @@ public with sharing class IntegracaoPecasCarro {
                 System.debug(e.getMessage());
             }        
         } 
+
     }
 }
